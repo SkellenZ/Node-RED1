@@ -83,24 +83,24 @@ module.exports = {
             permissions: "*"
         }]
     },
-    adminAuth: {
-        type: "credentials",
-        users: function (username) {
-            if (process.env.NODE_RED_USERNAME == username) {
-                return when.resolve({username: username, permissions: "*"})
-            } else {
-                return when.resolve(null)
-            }
-        },
-        authenticate: function (username, password) {
-            if (process.env.NODE_RED_USERNAME == username &&
-                process.env.NODE_RED_PASSWORD == password) {
-                return when.resolve({username: username, permissions: "*"})
-            } else {
-                return when.resolve(null)
-            }
-        }
-    },
+  //  adminAuth: {
+  //      type: "credentials",
+  //      users: function (username) {
+  //          if (process.env.NODE_RED_USERNAME == username) {
+  //              return when.resolve({username: username, permissions: "*"})
+  //          } else {
+  //              return when.resolve(null)
+  //          }
+  //      },
+  //      authenticate: function (username, password) {
+  //          if (process.env.NODE_RED_USERNAME == username &&
+  //              process.env.NODE_RED_PASSWORD == password) {
+  //              return when.resolve({username: username, permissions: "*"})
+  //          } else {
+   //             return when.resolve(null)
+   //         }
+   //     }
+  //  },
     /** The following property can be used to enable HTTPS
      * This property can be either an object, containing both a (private) key
      * and a (public) certificate, or a function that returns such an object.
@@ -143,7 +143,7 @@ module.exports = {
      */
     //httpNodeAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
     //httpStaticAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
-    httpNodeAuth: {user:"admin",pass:"1e9f9d62099ef40f6c0314549eebb6c7"},
+    httpNodeAuth: {user:"admin",pass:"$2y$10$p5KhEaYty3m/GRX2GgQG6.KNDqp.XqrBbRYrlxhCwbKdYZoroS5HG"},
     /*******************************************************************************
      * Server Settings
      *  - uiPort
