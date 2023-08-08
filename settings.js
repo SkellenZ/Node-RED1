@@ -143,7 +143,7 @@ module.exports = {
      */
     //httpNodeAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
     //httpStaticAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
-
+    httpNodeAuth: {user:"admin",pass:"1e9f9d62099ef40f6c0314549eebb6c7"},
     /*******************************************************************************
      * Server Settings
      *  - uiPort
