@@ -75,32 +75,21 @@ module.exports = {
     /** To password protect the Node-RED editor and admin API, the following
      * property can be used. See http://nodered.org/docs/security.html for details.
      */
-    adminAuth: {
-        type: "credentials",
-        users: [{
+adminAuth: {
+    type: "credentials",
+    users: [
+        {
             username: "admin",
-            password: "$2y$10$p5KhEaYty3m/GRX2GgQG6.KNDqp.XqrBbRYrlxhCwbKdYZoroS5HG",
+            password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
             permissions: "*"
-        }]
-    },
-  //  adminAuth: {
-  //      type: "credentials",
-  //      users: function (username) {
-  //          if (process.env.NODE_RED_USERNAME == username) {
-  //              return when.resolve({username: username, permissions: "*"})
-  //          } else {
-  //              return when.resolve(null)
-  //          }
-  //      },
-  //      authenticate: function (username, password) {
-  //          if (process.env.NODE_RED_USERNAME == username &&
-  //              process.env.NODE_RED_PASSWORD == password) {
-  //              return when.resolve({username: username, permissions: "*"})
-  //          } else {
-   //             return when.resolve(null)
-   //         }
-   //     }
-  //  },
+        },
+        {
+            username: "george",
+            password: "$2b$08$wuAqPiKJlVN27eF5qJp.RuQYuy6ZYONW7a/UWYxDTtwKFCdB8F19y",
+            permissions: "read"
+        }
+    ]
+},
     /** The following property can be used to enable HTTPS
      * This property can be either an object, containing both a (private) key
      * and a (public) certificate, or a function that returns such an object.
@@ -143,7 +132,6 @@ module.exports = {
      */
     //httpNodeAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
     //httpStaticAuth: {user:"user",pass:"$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."},
-    httpNodeAuth: {user:"admin",pass:"$2y$10$p5KhEaYty3m/GRX2GgQG6.KNDqp.XqrBbRYrlxhCwbKdYZoroS5HG"},
     /*******************************************************************************
      * Server Settings
      *  - uiPort
